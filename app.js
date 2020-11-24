@@ -30,10 +30,11 @@ app.post('/counter-register', (req, res) => {
     }
 
     sgMail.send(msg).then(() => {
-        console.log('Email sent')
+        console.log('Email sent');
+        res.sendStatus(200);
     })
         .catch((error) => {
-            console.log(error);
+            res.status(500).send(error);
         })
     ;
 });
