@@ -14,6 +14,12 @@ const app = express();
 
 app.use(cors());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://4th-ir-register.netlify.app/");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 //body parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.json());
