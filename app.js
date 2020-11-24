@@ -3,7 +3,6 @@ const express = require('express');
 require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
 const bodyParser = require('body-parser');
-const request = require('request');
 sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY );
 
 
