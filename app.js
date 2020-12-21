@@ -19,9 +19,9 @@ app.post('/counter-register', (req, res) => {
     // model message to be sent
     const msg = {
         to: email,
-        from: 'nodenkey@gmail.com',
+        from: 'support@4th-ir.com',
         templateId: process.env.REACT_APP_TEMPLATE_ID,
-        subject: 'Sending with SendGrid is Fun',
+        subject: 'Registration successful',
     }
 
     sgMail.send(msg).then(() => {
